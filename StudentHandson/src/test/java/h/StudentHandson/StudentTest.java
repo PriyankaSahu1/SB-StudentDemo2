@@ -20,6 +20,8 @@ class StudentTest {
 	
 	static List<Student> std=List.of(new Student("pia",1,"it","a"));
 	
+	//juint test case 
+	
 	@Test
 	void TestSave() {
 		dao.save(std.get(0));
