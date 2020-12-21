@@ -15,7 +15,7 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 @DataJpaTest
 class StudentTest {
 
-	@Autowired
+	/*@Autowired
 	StudentDao dao;
 	
 	 List<Student> std=List.of(new Student("pia",1,"it","a"));
@@ -28,7 +28,7 @@ class StudentTest {
 		List<Student> l=new ArrayList<Student>();
 		dao.findAll().forEach(c->l.add(c));
 		assertEquals(1,l.size());
-	}
+	}*/
 	
 	
 
