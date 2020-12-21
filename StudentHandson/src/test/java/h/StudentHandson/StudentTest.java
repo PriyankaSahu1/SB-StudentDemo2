@@ -18,7 +18,7 @@ class StudentTest {
 	@Autowired
 	StudentDao dao;
 	
-	static List<Student> std=List.of(new Student("pia",1,"it","a"));
+	 List<Student> std=List.of(new Student("pia",1,"it","a"));
 	
 	//juint test case 
 	
