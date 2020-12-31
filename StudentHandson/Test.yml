@@ -33,7 +33,7 @@
         shell: nohup /usr/local/tomcat/bin/startup.sh &
       - name: Copy the war file
         copy:
-            src: /var/lib/jenkins/workspace/pipelineDemo1/StudentTest/target/StudentHandson-0.0.1-SNAPSHOT.war
+            src: /var/lib/jenkins/workspace/StudentPipeline/StudentHandson/target/StudentHandson-0.0.1-SNAPSHOT.war
             dest: /usr/local/tomcat/webapps/
       - name: Start Tomcat
         command: /usr/local/tomcat/bin/startup.sh
