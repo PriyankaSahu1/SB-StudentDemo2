@@ -1,0 +1,3 @@
+[hostserver]
+
+34.123.79.140 ansible_ssh_user=priyankasahu101
