@@ -1,0 +1,36 @@
+pipeline{
+    agent any
+	
+	stages{
+	  stage('Compile Stage'){
+			steps{
+				
+					sh '''
+          cd StudentHandson
+          mvn compile 
+    '''
+		    }
+	    }
+	    
+	    stage('QA test Stage'){
+			steps{
+					sh '''
+          cd StudentHandson
+          mvn clean test package sonar:sonar
+    '''
+				}
+		    }
+		     stage('Junit test Stage'){
+			steps{
+				
+				junit 'StudentHandson/target/surefire-reports/*.xml'
+		    }
+	    }
+	  stage('ansible-deploy'){
+	      steps{
+	          ansiblePlaybook credentialsId: 'Ansible', disableHostKeyChecking: true, installation: 'AnsibleTest', inventory: 'StudentHandson/dev.inv', playbook: 'StudentHandson/Test.yml'
+	      }
+	  }
+	    
+	}
+}
