@@ -1,3 +1,3 @@
 [hostserver]
 
-34.70.22.99 ansible_ssh_user=priyankasahu101
+34.123.8.41 ansible_ssh_user=priyankasahu101
