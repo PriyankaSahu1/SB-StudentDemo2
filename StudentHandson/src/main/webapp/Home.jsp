@@ -30,7 +30,7 @@ tr:hover {
 <div>
 <h3>${std }</h3>
 <h1>Welcome!! Insert Student Details:</h1>
-<form action="/AddStudent">
+<form action="AddStudent">
 <table  class="table table-striped">
 <tr>
 <td>Name:</td>
