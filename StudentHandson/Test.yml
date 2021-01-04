@@ -27,8 +27,6 @@
           src: "/usr/local/apache-tomcat-8.5.61.tar.gz"
           dest: /usr/local
           remote_src: yes
-      - name: Renaming tomcat home
-        command: mv /usr/local/apache-tomcat-8.5.61 /usr/local/tomcat
       - name: Starting tomcat
         shell: nohup /usr/local/tomcat/bin/startup.sh &
       - name: Copy the war file

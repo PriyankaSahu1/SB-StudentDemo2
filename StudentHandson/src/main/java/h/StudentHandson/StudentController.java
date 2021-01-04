@@ -18,12 +18,15 @@ public class StudentController {
 	}
 	
 	@RequestMapping("/AddStudent")
-	public ModelAndView addStudent(Student std) {
-		ModelAndView mv= new ModelAndView();
+	public String addStudent(Student std) {
+		/*ModelAndView mv= new ModelAndView();
 		dao.save(std);
 		mv.addObject("std", "Record Inserted");
 		mv.setViewName("Home.jsp");
-		return mv;
+		return mv;*/
+		
+		dao.save(std);
+		return "Home.jsp";
 	}
 
 	@RequestMapping("/getStudent")
