@@ -7,7 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-${s.roll }, ${s.name }, ${s.stream }, ${s.grade }<br>
+<p>
+${student}
+</p>
+<br>
 
 </body>
 </html>
