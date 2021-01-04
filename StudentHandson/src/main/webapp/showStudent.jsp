@@ -5,11 +5,15 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<style type="text/css">
+h1{
+background-color: pink;}</style>
 </head>
 <body>
-<p>
+<h2>Student Details Are:</h2>
+<h1>
 ${student}
-</p>
+</h1>
 <br>
 
 </body>
