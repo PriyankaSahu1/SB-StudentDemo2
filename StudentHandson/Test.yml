@@ -3,8 +3,6 @@
     gather_facts: true
     become: yes
     become_method: sudo
-    vars:
-     tomcat_port: 8282
     tasks:
       - name : upadte source list
         command: apt-get update
