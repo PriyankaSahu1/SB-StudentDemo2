@@ -28,8 +28,7 @@ pipeline{
 	    }
 	  stage('ansible-deploy'){
 	      steps{
-	           sh 'ansible-playbook StudentHandson/Test.yml'
-	          //ansiblePlaybook credentialsId: 'Ansible', disableHostKeyChecking: true, installation: 'AnsibleTest', inventory: 'StudentHandson/dev.inv', playbook: 'StudentHandson/Test.yml'
+	          ansiblePlaybook credentialsId: 'Ansible', disableHostKeyChecking: true, installation: 'AnsibleTest', inventory: 'StudentHandson/dev.inv', playbook: 'StudentHandson/Test.yml'
 	      }
 	  }
 	    
