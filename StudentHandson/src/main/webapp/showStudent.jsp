@@ -15,6 +15,6 @@ background-color: pink;}</style>
 ${student}
 </h1>
 <br>
-
+<a href="home">click to go back</a>
 </body>
 </html>
