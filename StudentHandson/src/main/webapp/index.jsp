@@ -27,37 +27,10 @@ tr:hover {
 </head>
 <body>
 <center>
-<div>
-<h3>${std }</h3>
-<h1>Welcome!! Insert Student Details:</h1>
-<form action="AddStudent">
-<table  class="table table-striped">
-<tr>
-<td>Name:</td>
-<td><input type="text" name="name">
-</tr>
-<tr>
-<td>Roll:</td>
-<td><input type="text" name="roll">
-</tr>
-<tr>
-<td>Stream:</td>
-<td><input type="text" name="stream">
-</tr>
-<tr>
-<td>Grade:</td>
-<td><input type="text" name="grade">
-</tr>
-<tr><td>
-<input type="submit" value="submit" class="btn btn-info"></td>
-</tr>
-</table></form>
-
-<a href="index" class="btn btn-info" >Homepage</a>
-
-
-<h1>${s.roll }</h1>
-</div>
+<h1>Welcome to Student App</h1>
+<h2><marquee>Choose your option to perform the activity</marquee></h2>
+<a href="home" class="btn btn-info">Add Student</a>
+<a href="view" class="btn btn-info">View Student</a>
 </center>
 </body>
 </html>

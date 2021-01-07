@@ -16,6 +16,14 @@ public class StudentController {
 	public String home() {
 		return "Home.jsp";
 	}
+	@RequestMapping("/index")
+	public String home1() {
+		return "index.jsp";
+	}
+	@RequestMapping("/view")
+	public String home2() {
+		return "View.jsp";
+	}
 	
 	@RequestMapping("/AddStudent")
 	public String addStudent(Student std) {
