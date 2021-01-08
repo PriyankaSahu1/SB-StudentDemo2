@@ -26,6 +26,25 @@ pipeline{
 				junit 'StudentHandson/target/surefire-reports/*.xml'
 		    }
 	    }
+	    stage('upload war to nexus'){
+			steps{
+				
+				nexusArtifactUploader artifacts: [
+				[
+				  artifactId: 'StudentHandson', 
+				  classifier: '', 
+				  file: 'StudentHandson/target/StudentHandson-0.0.1-SNAPSHOT.war', 
+				  type: 'WAR']
+				 ], 
+				 credentialsId: 'nexus', 
+				 groupId: 'h', 
+				 nexusUrl: '192.168.56.108:8081', 
+				 nexusVersion: 'nexus3', 
+				 protocol: 'http', 
+				 repository: 'Student-project', 
+				 version: '0.0.1-SNAPSHOT'
+		    }
+	    }
 	  stage('ansible-deploy'){
 	      steps{
 	          ansiblePlaybook credentialsId: 'ansible-privateKey', disableHostKeyChecking: true, installation: 'ansible', inventory: 'StudentHandson/dev.inv', playbook: 'StudentHandson/Test.yml'
