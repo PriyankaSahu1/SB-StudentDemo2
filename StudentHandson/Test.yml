@@ -26,7 +26,9 @@
         unarchive:
           src: "/usr/local/{{tomcat_name}}.tar.gz"
           dest: /usr/local
-          remote_src: yes
+          remote_src: yes  
+      - name: Starting tomcat
+        shell: nohup /usr/local/tomcat/bin/startup.sh &
       - name: Copy the war file
         copy:
             src: "{{war_file}}"
