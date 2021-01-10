@@ -9,9 +9,9 @@
      - war_file: /var/lib/jenkins/workspace/StudentPipeline/StudentHandson/target/StudentHandson-0.0.1-SNAPSHOT.war
      
     tasks:
-      - name : upadte source list
+      - name : updating  source list
         command: apt-get update
-      - name: Update repos
+      - name: Updating repositories
         apt:
           name: "*"
           state: latest
