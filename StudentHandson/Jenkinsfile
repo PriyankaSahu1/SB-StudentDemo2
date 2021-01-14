@@ -1,13 +1,31 @@
+#!/usr/bin/env groovy
+
+@Library('shared-library@main') _ 
+
 pipeline{
     agent any
 	
 	stages{
+	  stage('mvn Stage'){
+			steps{
+				
+					sh '''
+          cd StudentHandson
+          mvn clean install 
+    '''
+		    }
+	    }
+	    stage ('Check logs') {
+                    steps {
+                        filterLogs ('WARNING', 10)
+                    }
+                }
 	  stage('Compile Stage'){
 			steps{
 				
 					sh '''
           cd StudentHandson
-          mvn compile 
+          mvn clean compile 
     '''
 		    }
 	    }
