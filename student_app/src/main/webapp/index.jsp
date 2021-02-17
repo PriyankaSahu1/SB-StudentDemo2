@@ -22,21 +22,15 @@
 tr:hover {
 	background-color: cyan;
 }
-body{
-text-align: center;}
   
   </style>
 </head>
 <body>
-
-<br><br><br>
-<form action="getStudent">
-Enter roll to find details:
-<input type="text" name="roll"><br>
-<input type="submit" class="btn btn-info">
-</form>
-<h1>${s.roll }</h1>
-
-
+<center>
+<h1>Welcome to Student App</h1>
+<h2><marquee>Choose your option to perform the activity</marquee></h2>
+<a href="home" class="btn btn-info">Add Student</a>
+<a href="view" class="btn btn-info">View Student</a>
+</center>
 </body>
 </html>

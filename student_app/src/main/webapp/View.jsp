@@ -22,13 +22,11 @@
 tr:hover {
 	background-color: cyan;
 }
-body{
-text-align: center;}
   
   </style>
 </head>
 <body>
-
+<center>
 <br><br><br>
 <form action="getStudent">
 Enter roll to find details:
@@ -37,6 +35,6 @@ Enter roll to find details:
 </form>
 <h1>${s.roll }</h1>
 
-
+</center>
 </body>
 </html>
